@@ -1,0 +1,152 @@
+{
+  "agent_name": "Script Production Manager",
+  "agent_id": "6999cf0e6be0a645ebe7f78e",
+  "description": "Coordinates the research and scriptwriting sub-agents, combines historical research with creative script output into a unified, production-ready script package for the creator",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "script_title": "string",
+    "topic": "string",
+    "target_age_range": "string",
+    "video_length": "string",
+    "style_tags": [
+      "string"
+    ],
+    "research_summary": {
+      "overview": "string",
+      "key_events": [
+        {
+          "date": "string",
+          "event": "string",
+          "significance": "string"
+        }
+      ],
+      "key_figures": [
+        {
+          "name": "string",
+          "role": "string",
+          "detail": "string"
+        }
+      ]
+    },
+    "scenes": [
+      {
+        "scene_number": "number",
+        "scene_title": "string",
+        "narration": "string",
+        "visual_suggestions": "string",
+        "duration_estimate": "string",
+        "interactive_elements": [
+          {
+            "type": "string",
+            "content": "string"
+          }
+        ]
+      }
+    ],
+    "quiz_questions": [
+      {
+        "question": "string",
+        "options": [
+          "string"
+        ],
+        "correct_answer": "string",
+        "scene_placement": "number"
+      }
+    ],
+    "fun_facts": [
+      {
+        "fact": "string",
+        "why_its_cool": "string",
+        "scene_placement": "number"
+      }
+    ],
+    "modern_connections": [
+      {
+        "historical_element": "string",
+        "modern_link": "string",
+        "scene_placement": "number"
+      }
+    ],
+    "intro_hook": "string",
+    "outro_cta": "string",
+    "production_notes": "string"
+  },
+  "example_response": {
+    "script_title": "sample string",
+    "topic": "sample string",
+    "target_age_range": "sample string",
+    "video_length": "sample string",
+    "style_tags": [
+      "sample string"
+    ],
+    "research_summary": {
+      "overview": "sample string",
+      "key_events": [
+        {
+          "date": "sample string",
+          "event": "sample string",
+          "significance": "sample string"
+        }
+      ],
+      "key_figures": [
+        {
+          "name": "sample string",
+          "role": "sample string",
+          "detail": "sample string"
+        }
+      ]
+    },
+    "scenes": [
+      {
+        "scene_number": 0,
+        "scene_title": "sample string",
+        "narration": "sample string",
+        "visual_suggestions": "sample string",
+        "duration_estimate": "sample string",
+        "interactive_elements": [
+          {
+            "type": "sample string",
+            "content": "sample string"
+          }
+        ]
+      }
+    ],
+    "quiz_questions": [
+      {
+        "question": "sample string",
+        "options": [
+          "sample string"
+        ],
+        "correct_answer": "sample string",
+        "scene_placement": 0
+      }
+    ],
+    "fun_facts": [
+      {
+        "fact": "sample string",
+        "why_its_cool": "sample string",
+        "scene_placement": 0
+      }
+    ],
+    "modern_connections": [
+      {
+        "historical_element": "sample string",
+        "modern_link": "sample string",
+        "scene_placement": 0
+      }
+    ],
+    "intro_hook": "sample string",
+    "outro_cta": "sample string",
+    "production_notes": "sample string"
+  },
+  "has_module_outputs": true,
+  "module_outputs_example": {
+    "artifact_files": [
+      {
+        "file_url": "https://example.com/image.png"
+      }
+    ]
+  }
+}

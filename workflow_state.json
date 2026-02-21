@@ -1,0 +1,30 @@
+{
+  "agents": {
+    "history_research_agent": {
+      "agent_id": "6999cef2b6d5f732116819e2",
+      "name": "History Research Agent",
+      "type": "sub-agent",
+      "provider": "Perplexity",
+      "model": "sonar-pro"
+    },
+    "script_visual_creator_agent": {
+      "agent_id": "6999cef22b9e1319f70b1541",
+      "name": "Script & Visual Creator Agent",
+      "type": "sub-agent",
+      "provider": "OpenAI",
+      "model": "gpt-4.1"
+    },
+    "script_production_manager": {
+      "agent_id": "6999cf0e6be0a645ebe7f78e",
+      "name": "Script Production Manager",
+      "type": "manager",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "managed_agents": [
+        "6999cef2b6d5f732116819e2",
+        "6999cef22b9e1319f70b1541"
+      ]
+    }
+  },
+  "manager_agent_id": "6999cf0e6be0a645ebe7f78e"
+}

@@ -1,0 +1,136 @@
+{
+  "agent_name": "Script Production Manager",
+  "agent_id": "6999cf0e6be0a645ebe7f78e",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "AgentResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "script_title": { "type": "string" },
+          "topic": { "type": "string" },
+          "target_age_range": { "type": "string" },
+          "video_length": { "type": "string" },
+          "style_tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "research_summary": {
+            "type": "object",
+            "properties": {
+              "overview": { "type": "string" },
+              "key_events": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "date": { "type": "string" },
+                    "event": { "type": "string" },
+                    "significance": { "type": "string" }
+                  },
+                  "required": ["date", "event", "significance"],
+                  "additionalProperties": false
+                }
+              },
+              "key_figures": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": { "type": "string" },
+                    "role": { "type": "string" },
+                    "detail": { "type": "string" }
+                  },
+                  "required": ["name", "role", "detail"],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": ["overview", "key_events", "key_figures"],
+            "additionalProperties": false
+          },
+          "scenes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "scene_number": { "type": "number" },
+                "scene_title": { "type": "string" },
+                "narration": { "type": "string" },
+                "visual_suggestions": { "type": "string" },
+                "duration_estimate": { "type": "string" },
+                "interactive_elements": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": { "type": "string" },
+                      "content": { "type": "string" }
+                    },
+                    "required": ["type", "content"],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": ["scene_number", "scene_title", "narration", "visual_suggestions", "duration_estimate", "interactive_elements"],
+              "additionalProperties": false
+            }
+          },
+          "quiz_questions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "question": { "type": "string" },
+                "options": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "correct_answer": { "type": "string" },
+                "scene_placement": { "type": "number" }
+              },
+              "required": ["question", "options", "correct_answer", "scene_placement"],
+              "additionalProperties": false
+            }
+          },
+          "fun_facts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "fact": { "type": "string" },
+                "why_its_cool": { "type": "string" },
+                "scene_placement": { "type": "number" }
+              },
+              "required": ["fact", "why_its_cool", "scene_placement"],
+              "additionalProperties": false
+            }
+          },
+          "modern_connections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "historical_element": { "type": "string" },
+                "modern_link": { "type": "string" },
+                "scene_placement": { "type": "number" }
+              },
+              "required": ["historical_element", "modern_link", "scene_placement"],
+              "additionalProperties": false
+            }
+          },
+          "intro_hook": { "type": "string" },
+          "outro_cta": { "type": "string" },
+          "production_notes": { "type": "string" }
+        },
+        "required": ["script_title", "topic", "target_age_range", "video_length", "style_tags", "research_summary", "scenes", "quiz_questions", "fun_facts", "modern_connections", "intro_hook", "outro_cta", "production_notes"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

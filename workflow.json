@@ -1,0 +1,41 @@
+{
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "User Input",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "manager_agent",
+      "type": "Agent",
+      "label": "Script Production Manager",
+      "nodeCategory": "agent"
+    },
+    {
+      "id": "research_agent",
+      "type": "Agent",
+      "label": "History Research Agent",
+      "nodeCategory": "agent"
+    },
+    {
+      "id": "script_agent",
+      "type": "Agent",
+      "label": "Script & Visual Creator Agent",
+      "nodeCategory": "agent"
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Script Output",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    { "source": "input_node", "target": "manager_agent" },
+    { "source": "manager_agent", "target": "research_agent" },
+    { "source": "manager_agent", "target": "script_agent" },
+    { "source": "research_agent", "target": "output_node" },
+    { "source": "script_agent", "target": "output_node" }
+  ]
+}

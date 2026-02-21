@@ -1,0 +1,76 @@
+{
+  "agent_name": "History Research Agent",
+  "agent_id": "6999cef2b6d5f732116819e2",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "AgentResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "topic_overview": { "type": "string" },
+          "key_events_timeline": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "date": { "type": "string" },
+                "event": { "type": "string" },
+                "significance": { "type": "string" }
+              },
+              "required": ["date", "event", "significance"],
+              "additionalProperties": false
+            }
+          },
+          "important_figures": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "role": { "type": "string" },
+                "interesting_detail": { "type": "string" }
+              },
+              "required": ["name", "role", "interesting_detail"],
+              "additionalProperties": false
+            }
+          },
+          "fun_facts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "fact": { "type": "string" },
+                "why_its_cool": { "type": "string" }
+              },
+              "required": ["fact", "why_its_cool"],
+              "additionalProperties": false
+            }
+          },
+          "story_angles": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "modern_connections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "historical_element": { "type": "string" },
+                "modern_link": { "type": "string" }
+              },
+              "required": ["historical_element", "modern_link"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["topic_overview", "key_events_timeline", "important_figures", "fun_facts", "story_angles", "modern_connections"],
+        "additionalProperties": false
+      }
+    }
+  }
+}
